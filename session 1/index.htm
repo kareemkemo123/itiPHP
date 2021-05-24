@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        div{
+            margin-bottom: 10px;
+        }
+        #sub{
+            border: 1px black solid;
+            border-radius: 0;
+            padding: 5px;
+            width: 100px;
+        }
+        #sub:hover{
+            background-color: black;
+            color: white;
+            transition-duration: 0.5s;
+            border: 1px white solid;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <form action="students.html" method="get">
+           <fieldset style="border-radius: 5px;width: 50%">
+                <legend><h1>Login</h1></legend>
+                <div>
+                    <label>Username
+                    <input type="text" placeholder="NAME" required/>
+                    </label>
+                </div>
+                <div>
+                    <label >Password
+                    <input type="password" placeholder="PASS" required/>
+                    </label>
+                </div>
+                <input type="submit" value="Login" id="sub"/>
+                <br>
+                <span>If you don't have an account <a href="signup.html">sign up</a> here</span>
+            </fieldset>
+        </form>
+    </center>
+</body>
+</html>
