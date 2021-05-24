@@ -1,0 +1,23 @@
+.container{
+	display: inline-block;
+	margin: 40px;
+	border: 1px solid black;
+	padding: 10px;
+}
+.container:hover{
+	background: #a0a0a0;
+	transition-duration: 0.3s;
+}
+.container button{
+	border-radius: 0px;
+	border: 0px;
+	display: block;
+	margin: 10px 0px;
+	background: white;
+	cursor: pointer;
+}
+.container button:hover{
+	background: black;
+	color: white;
+	transition-duration: 0.3s;
+}

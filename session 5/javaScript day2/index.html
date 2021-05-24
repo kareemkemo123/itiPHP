@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.tbl{
+			width: 40%;
+			border-collapse: collapse;
+		}
+		.tbl,tr,td{
+			border: 2px solid blue;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		//var name="ahmed,ali,sara";
+		//new String("ahmed")
+		// names=name.split(",");
+		// alert(typeof names);
+		// for(i=0;i<= names.length-1;i++){
+		// 	alert(names[i]);
+		// }
+		var numbers=prompt("enter numbers : ");
+		nums=numbers.split(",");
+		// 1,2,6,1,7
+		n=[];
+		// sum=0;
+		document.write("<table class='tbl' align='center'><tr><th>numbers</th></tr>");
+		for(i=0;i<=nums.length-1;i++){
+			document.write("<tr><td>"+nums[i]+"</td></tr>");
+			for(j=i+1;j<=nums.length-1;j++){
+				if(nums[i]==nums[j]){
+					n.push(nums[i]);
+				}
+			}
+			// sum+=parseInt(nums[i]);
+		}
+		document.write("<tr><td>sum : "+eval(nums.join("+"))+"</td></tr></table>");
+
+		alert(n);
+	</script>
+</body>
+</html>

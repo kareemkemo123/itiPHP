@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var std={
+			first_name:"sara",
+			last_name:"ali",
+			grade:2,
+			subjects:["algorithms","network","java"],
+			image:"sara.jpg"
+		};
+
+		var students=[
+			{
+				first_name:"sara",
+				last_name:"ali",
+				grade:2,
+				subjects:[
+					{
+						name:"algorithms",
+						hours:30,
+						grade:85
+					},{
+						name:"network",
+						hours:40,
+						grade:75
+					},{
+						name:"php",
+						hours:20,
+						grade:60
+					}
+				],
+				image:"sara.jpg"
+			},
+			{
+				first_name:"mona",
+				last_name:"ahmed",
+				grade:3,
+				subjects:["html","css","java"],
+				image:"mona.jpg"
+			}
+		];
+		alert(students[0].subjects[1].grade)
+	</script>
+</body>
+</html>

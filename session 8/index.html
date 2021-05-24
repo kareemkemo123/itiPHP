@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ITI | Lab 8</title>
+	<style type="text/css">
+		body{
+			font-family: 'arial';
+		}
+		.timeContainer, .timerContainer{
+			font-family: normal;
+			position: fixed;
+			top: 5px;
+			background-color: #bfbfbf;
+			padding: 5px;
+		}
+		.timeContainer{
+			left: 5px;
+		}
+		.timerContainer{
+			right: 5px;
+		}
+		hr{
+			width: 70%;
+			display: inline-block;
+			margin: 0 auto;
+		}
+		.container{
+			text-align: center;
+			border: 1px solid #bfbfbf;
+			width: 80%;
+			margin: 5px auto;
+			padding-bottom: 10px;
+			position: relative;
+			top: 40px;
+		}
+		h1{
+			text-align: center;
+			font-family: "arial";
+		}
+		h1:first-letter{
+			color: rgba(0, 0, 255, 0.8);
+			display: inline-block;
+			background-color: #bfbfbf;
+			padding: 2px;
+			margin: 2px;
+		}
+		.Time{
+			display: inline;
+			color: #5f5f5f;
+		}
+		.btn{
+			font-weight: bold;
+			font-size: 20px;
+			border: none;
+			width: 20%;
+			padding: 10px;
+			background-color: #bfbfbf;
+		}
+		.btn:hover{
+			color: black;
+			background-color: rgba(0, 0, 255, 0.4);
+			transition: 0.3s;
+			cursor: pointer;
+		}
+		#helpBtn, #upToTopBtn{
+			position: fixed;
+			bottom: 5px;
+		}
+		#helpBtn{
+			left: 5px;
+		}
+		#upToTopBtn{
+			right: 5px;
+		}
+		.questions{
+			margin: 0 10px;
+			padding: 0 10px;
+			display: none;
+		}
+		.question p{
+			text-align: left;
+		}
+		.helperBtn{
+			border-radius: 50%;
+			padding: 5px;
+			width: 40px;
+			font-size: 20px;
+			display: inline-block;
+		}
+		#upToTopBtn{
+			display: none;
+		}
+	</style>
+	<script src="main.js"></script>
+</head>
+<body>
+	<div class="timeContainer">
+		<h2 class="Time">Time : </h2>
+		<span id="time"></span>
+	</div>
+	<div class="timerContainer">
+		<h2 class="Time">Exam Time : </h2>
+		<span id="timer"></span>
+	</div>
+
+	<div class="container">
+		<h1>Exam Model</h1>
+		<button id="startBtn" class="btn">Start exam</button>
+		<div class="questions" id="qBlock">
+			<div class="question">
+				<p>
+					1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum : 
+				</p>
+				<label>
+					<input type="radio" name="q1" value="1" class="radio">
+					One
+				</label>
+				
+				<label>
+					<input type="radio" name="q1" value="2" class="radio">
+					Two
+				</label>
+				<label>
+					<input type="radio" name="q1" value="3" class="radio">
+					Three
+				</label>
+			</div>
+
+			<hr>
+
+			<div class="question">
+				<p>
+					2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum : 
+				</p>
+				<label>
+					<input type="radio" name="q2" value="1" class="radio">
+					One
+				</label>
+				
+				<label>
+					<input type="radio" name="q2" value="2" class="radio">
+					Two
+				</label>
+				<label>
+					<input type="radio" name="q2" value="3" class="radio">
+					Three
+				</label>
+			</div>
+
+			<hr>
+
+			<div class="question">
+				<p>
+					3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum : 
+				</p>
+				<label>
+					<input type="radio" name="q3" value="1" class="radio">
+					One
+				</label>
+				
+				<label>
+					<input type="radio" name="q3" value="2" class="radio">
+					Two
+				</label>
+				<label>
+					<input type="radio" name="q3" value="3" class="radio">
+					Three
+				</label>
+			</div>
+
+			<hr>
+
+			<div class="question">
+				<p>
+					4. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum : 
+				</p>
+				<label>
+					<input type="radio" name="q4" value="1" class="radio">
+					One
+				</label>
+				
+				<label>
+					<input type="radio" name="q4" value="2" class="radio">
+					Two
+				</label>
+				<label>
+					<input type="radio" name="q4" value="3" class="radio">
+					Three
+				</label>
+			</div>
+
+			<hr>
+
+			<div class="question">
+				<p>
+					5. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum : 
+				</p>
+				<label>
+					<input type="radio" name="q5" value="1" class="radio">
+					One
+				</label>
+				
+				<label>
+					<input type="radio" name="q5" value="2" class="radio">
+					Two
+				</label>
+				<label>
+					<input type="radio" name="q5" value="3" class="radio">
+					Three
+				</label>
+			</div>
+
+			<br>
+
+			<button id="endBtn" class="btn">End exam</button>
+		</div>
+	</div>
+
+	<button id="helpBtn" class="helperBtn">?</button>
+	<button id="upToTopBtn" class="helperBtn">⇪</button>
+</body>
+</html>

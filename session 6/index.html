@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		label span{
+			display: inline-block;
+			text-align: left;
+		}
+		input {
+			float: right;
+		}
+		.container1 div, .container1 fieldset{
+			margin: 10px auto;
+			width: 22%;
+		}
+		.container1 div.clear{
+			clear: right;
+			text-align: right;
+			margin: 0;
+			width: 100%;
+			color: red;
+		}
+		textarea{
+			width: 100%;
+			height: 60px;
+		}
+		input[type="file"]{
+			float: none;
+		}
+		input[type="checkbox"]{
+			float: none;
+		}
+		.unFilled{
+			background-color: rgb(255, 0, 0);
+			color: white;
+		}
+		.filled{
+			background: white;
+			color: black;
+		}
+		#remembermeHandler{
+			display: inline-block;
+			width: auto;
+		}
+		table{
+			margin: auto;
+			border-collapse: collapse;
+			width: 40%;
+		}
+		table, tr, td{
+			padding: 5px;
+		}
+		table tr td[id]{
+			width: 70%;
+		}
+		#info div:last-child{
+			width: 40%;
+		}
+	</style>
+</head>
+<body>
+	<!----------------------------------- this is div 1 ------------------------------------->
+	<div class="container1" id="con1">
+		<div>
+			<label>
+				<span>Username :</span>
+				<input id="username" type="text" name="username" class="input">
+				<div class="clear" id="usernameHandler"></div>
+			</label>
+		</div>
+		<div>
+			<label>
+				<span>Password :</span>
+				<input id="password" type="password" name="password" class="input">	
+				<div class="clear" id="passwordHandler"></div>
+			</label>
+		</div>
+		<div>
+			<label>
+				<span>Phone number :</span>
+				<input type="text" name="phone" placeholder="xxx-xxxxxxxx" id="phone" class="input">	
+				<div class="clear" id="phoneHandler"></div>
+			</label>
+		</div>
+		<div>
+			<label>
+				<span>E-mail :</span>
+				<input type="email" name="email" id="email" class="input">
+				<div class="clear" id="emailHandler"></div>
+			</label>
+		</div>
+		<div>
+			<label>
+				<span>Birthday :</span>
+				<input type="date" name="birthday" id="date" class="input">	
+				<div class="clear" id="dateHandler"></div>
+			</label>
+		</div>
+		<div>
+			<button id="nextBtn">Next</button>
+		</div>
+	</div>
+
+	<!----------------------------------- this is div 2 ------------------------------------->
+	<div class="container1" id="con2" hidden>
+		<div>
+			<textarea placeholder="Write a feedback"></textarea>
+		</div>
+		<div>
+			<label>
+				Upload your picture :
+				<input type="file" name="pic" id="pic" >
+				<div class="clear" id="picHandler"></div>
+			</label>
+		</div>
+		<div>
+			<label style="display: inline-block;">
+				Remember me 
+				<input type="checkbox" name="rememberme" id="rememberme" class="input">
+				<div class="clear" id="remembermeHandler"></div>
+			</label>
+		</div>
+		<div>
+			<button id="backBtn">Back</button>
+			<button id="regBtn">Register</button>
+		</div>
+	</div>
+
+	<!----------------------------------- this is div 3 ------------------------------------->
+	<div class="container1" id="info" hidden>
+		<table border="1">
+			<tr>
+				<th colspan="2">Your information</th>
+			</tr>
+			<tr>
+				<td>Username</td>
+				<td id="usernameData"></td>
+			</tr>
+			<tr>
+				<td>Phone number</td>
+				<td id="phoneData"></td>
+			</tr>
+			<tr>
+				<td>E-mail</td>
+				<td id="emailData"></td>
+			</tr>
+			<tr>
+				<td>Birthday</td>
+				<td id="birthdayData"></td>
+			</tr>
+			<tr>
+				<td>Your photo source</td>
+				<td id="picData"></td>
+			</tr>
+			<tr>
+				<td>Remember me</td>
+				<td id="remembermeData"></td>
+			</tr>
+		</table>
+		<div>
+			<button id="returnBtn">Return</button>
+		</div>
+	</div>
+
+	<!---------------------------------- this is JS File ------------------------------------>
+	<script src="lab.js"></script>
+</body>
+</html>
